@@ -23,13 +23,54 @@
 <th>9:00 AM</th>
 <td colspan ="7"> Sleep </td>
 </tr>
+
+<tr>
 <th>10:00 AM</th>
+<td rowspan = "2"> Ufound 3100 </td>
+<td> Sleep/homework </td>
+<td rowspan = "2"> Ufound 3100 </td>
+<td colspan = "3"> Sleep/homework </td>
+<td> Church </td>
+</tr>
+
+<tr>
 <th>11:00 AM</th>
+
+<td> Chapel </td>
+
+<td colspan = "4"> Homework </td>
+</tr>
+
+<tr>
 <th>12:00 PM</th>
+<td colspan ="7"> Lunch </td>
+</tr>
+
+<tr>
 <th>1:00 PM</th>
+<td> Ucor 2000 </td>
+<td rowspan = "4"> Homework </td>
+<td> Ucor 2000 </td>
+<td rowspan = "4"> Homework </td>
+<td> Ucor 2000 </td>
+<td colspan="2"> Homework </td>
+
+</tr>
+
+<tr>
 <th>2:00 PM</th>
+<td colspan ="7"> Sleep </td>
+</tr>
+
+<tr>
 <th>3:00 PM</th>
+<td colspan ="7"> Sleep </td>
+</tr>
+
+<tr>
 <th>4:00 PM</th>
+<td colspan ="7"> Sleep </td>
+</tr>
 
 
 </table>
