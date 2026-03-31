@@ -7,28 +7,34 @@
 	
 <table>
 	<caption><h2>My schedule</h2></caption>
-<tc>Monday</tc>
-<tc>Tuesday</tc>
-<tc>Wednesday</tc>
-<tc>Thursday</tc>
-<tc>Friday</tc>
-<tc>Saturday</tc>
-<tc>Sunday</tc>
+<tr>
+<th></th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th>
+<th>Sunday</th>
 
-<tr></tr>
-<tr>9:00 AM</tr>
-<tr>10:00 AM</tr>
-<tr>11:00 AM</tr>
-<tr>12:00 PM</tr>
-<tr>1:00 PM</tr>
-<tr>2:00 PM</tr>
-<tr>3:00 PM</tr>
-<tr>4:00 PM</tr>
+</tr>
+
+<tr>
+<th>9:00 AM</th>
+<td colspan ="7"> Sleep </td>
+</tr>
+<th>10:00 AM</th>
+<th>11:00 AM</th>
+<th>12:00 PM</th>
+<th>1:00 PM</th>
+<th>2:00 PM</th>
+<th>3:00 PM</th>
+<th>4:00 PM</th>
 
 
 </table>
 
 		
-	</body>
+</body>
 
 </html>
