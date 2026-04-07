@@ -1,5 +1,11 @@
 
-<html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
 	<header>
 		<p><h1>Nate Bartlett's One-Page Website</h1></p>
 	</header>
