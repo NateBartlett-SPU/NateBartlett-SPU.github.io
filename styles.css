@@ -1,6 +1,6 @@
 
 
-.bodypage{ /* */
+.bodypage{ 
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:blanchedalmond;
@@ -60,7 +60,7 @@ img.logo{
 }
 
 
-table, th, td{ /* Use for table borders */
+table, th, td{ 
 border: 2px double black;
 border-collapse: collapse;
 
