@@ -2,98 +2,47 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" href="styles.css">
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <header>
-	<p><h1>Nate Bartlett's Website</h1></p>
+    <div style="background-color:tan; height: 86px; border:2px solid black;">
+	    
+            <img src="cool_images\comcat pfp.png" class="logo img-fluid" alt="combustion-cat-art">
+            <h1 class="text-center fs-1" >Nate Bartlett's Website</h1>
+        
+    </div>
 </header>
+
+
+
+<body class="bodypage">
+  
+<a href="index.html" class="btn btn-primary">Home</a>
+<a href="schedule.html" class="btn btn-primary">Schedule</a>
+<a href="projects.html" class="btn btn-primary">Upcoming Projects</a>
+
 <br>
-<body>
-<button class="btn" data-toggle="collapse" data-target="#schedule"> Nate's Schedule </button>
-
-
-<div class="collapse cardbody" id="schedule">
-
-<table class="table table-dark table-bordered text-center align-middle">
-	<caption><h2>My schedule</h2></caption>
-<tr>
-<th></th>
-<th>Monday</th>
-<th>Tuesday</th>
-<th>Wednesday</th>
-<th>Thursday</th>
-<th>Friday</th>
-<th>Saturday</th>
-<th>Sunday</th>
-
-</tr>
-
-<tr>
-<th>9:00 AM</th>
-<td colspan ="7"> Sleep </td>
-</tr>
-
-<tr>
-<th>10:00 AM</th>
-<td rowspan = "2"> Ufound 3100 </td>
-<td> Sleep/homework </td>
-<td rowspan = "2"> Ufound 3100 </td>
-<td colspan = "3"> Sleep/homework </td>
-<td> Church </td>
-</tr>
-
-<tr>
-<th>11:00 AM</th>
-<td> Chapel </td>
-<td colspan = "4"> Homework </td>
-</tr>
-
-<tr>
-<th>12:00 PM</th>
-<td colspan ="7"> Lunch Break </td>
-</tr>
-
-<tr>
-<th>1:00 PM</th>
-<td rowspan = "2"> Ucor 2000 </td>
-<td rowspan = "4"> Homework </td>
-<td rowspan = "2"> Ucor 2000 </td>
-<td rowspan = "4"> Homework </td>
-<td rowspan = "2"> Ucor 2000 </td>
-<td colspan="2" rowspan = "4"> Homework </td>
-
-</tr>
-
-<tr>
-<th>2:00 PM</th>
-
-</tr>
-
-<tr>
-<th>3:00 PM</th>
-<td rowspan="2"> CSC 3221 </td>
-<td rowspan="2"> CSC 3221 </td>
-<td rowspan="2"> CSC 3221 </td>
-</tr>
-
-<tr>
-<th>4:00 PM</th>
-
-</tr>
-
-<tr>
-<th>5:00 PM</th>
-<td colspan = "7"> Dinner</td>
-</tr>
-
-</table>
-<break>
-<p><h3>For more information, click <a href="https://www.youtube.com/watch?v=3W3b-ayIpTg">here</a></h3></p>
-	
+<div class="bodypage bodybox" >
+    <h2>About Me:</h2>
+    <br>
+<p>Hi! My name is Nate Bartlett (They/Them), an I am a Computer Science Student in my Sophomore year at Seattle Pacific University.</p>
+<p>This site currently serves to display my knowledge of HTML and CSS for my Netcentric Coding class.</p>
+<p>The art in the top left corner of the website was drawn by me as part of the card game I'm designing!</p>
 </div>
+<div class="bodypage bodybox" >
+    <h2>This Website:</h2>
+    <br>
+    <p>In the creation of this website, CSS was used to style the navigation buttons at the top of the page, so that they change color when hovered, or clicked.</p> 
+    <p>In addition, The combustion cat in the top left uses CSS to maintain a consistent size across all (currently 3) pages on the site.</p>
+    <p>There are a few other cases where css was helpful, like on these divs that this text is written in, and the table on the schedule page, but that's mostly it.</p>
+    <p>Bootstrap was used for the styles on the schedule itself, as well as the functionality/style of the buttons on each page. I do not like bootstrap, so i didn't use it as much.</p>
+  
+</div>
+
+
 
 </body>
 

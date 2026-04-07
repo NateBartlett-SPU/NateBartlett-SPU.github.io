@@ -1,13 +1,74 @@
 
 
+.bodypage{ /* */
 
-p{
-    color:green;
-    /*placeholder code, might leave*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:blanchedalmond;
 }
+
+
 
 th{
     font-size: 15pt;
-    
+    background-color: rgb(148, 119, 82);
+
+}
+td {
+    background-color: blanchedalmond;
+}
+
+button.btn{
+    background-color:tan;
+    color: black;
+    border:2px solid black;
+    width: 200px;
+    height:auto;
+
+}button.btn:hover{
+    background-color:rgb(148, 119, 82);
+    border:2px solid black;
+
+}button.btn:active{
+     background-color:rgb(97, 77, 51);
+    border:2px solid black;
+} 
+
+
+a.btn{
+    background-color:tan;
+    color: black;
+    border:2px solid black;
+    width: 200px;
+    height:auto;
+    margin:5px;
+
+}a.btn:hover, a.btn:focus{
+    background-color:rgb(148, 119, 82);
+    border:2px solid black;
+
+}a.btn:active{
+     background-color:rgb(97, 77, 51);
+    border:2px solid black;
+} 
+
+img.logo{
+    float:left; 
+    padding:auto; 
+    border: 2px solid black;
+    width: 80px;
+    height: auto;
+}
+
+
+table, th, td{ /* Use for table borders */
+border: 2px double black;
+border-collapse: collapse;
+
+}
+div.bodybox{
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
 
 }
