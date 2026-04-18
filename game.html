@@ -1,0 +1,200 @@
+
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<header>
+    <div style="background-color:tan; height: 86px; border:2px solid black;">
+	    
+            <img src="cool_images\comcat pfp.png" class="logo img-fluid" alt="combustion-cat-art">
+            <h1 class="text-center fs-1" >Nate Bartlett's Website</h1>
+        
+    </div>
+</header>
+
+
+
+<body class="bodypage">
+  
+<a href="index.html" class="btn menu btn-secondary">Home</a>
+<a href="schedule.html" class="btn menu btn-secondary">Schedule</a>
+<a href="projects.html" class="btn menu btn-secondary">Upcoming Projects</a>
+<a href="game.html" class="btn menu btn-secondary">Game</a>
+
+<script>
+let fullDeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
+let playerScore = 0;
+let enemyScore = 0;
+let userChips = 1000;
+let betChips = 0;
+resetGame();
+
+function resetGame(){
+    document.getElementById("reset").textContent = "Reset game";
+    playerScore = 0;
+    enemyScore = 0;
+    
+    fullDeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
+    
+    betChips = 0;
+    document.getElementById("betInput").hidden = false;
+    document.getElementById("betButton").hidden = false;
+    
+    document.getElementById("pScore").textContent = "Your score: 0";
+    document.getElementById("oScore").textContent = "Opponent's score: 0";
+    document.getElementById("pCards").textContent = "Your cards: ";
+    document.getElementById("oCards").textContent = "Opponent's cards: ";
+    addEScore();
+    document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    document.getElementById("money").textContent = "Your chips: " + userChips;
+    document.getElementById("betDisplay").textContent = "Current bet: " + betChips;
+}
+
+
+
+function drawCard(){
+    
+    let index = Math.floor(Math.random() * 13);
+    return fullDeck[index];
+
+}
+
+function addPScore(){
+    if (playerScore > 21) {
+        return
+    }
+
+    let card = drawCard();
+    playerScore += card;
+    if (card == 10){
+        let ranks = ["J", "Q", "K"];
+
+        document.getElementById("pCards").textContent += (ranks[Math.floor(Math.random()*3.0)] + " ");
+    }else if (card == 1){
+        document.getElementById("pCards").textContent += ("A ");
+    }else{
+        document.getElementById("pCards").textContent += (card.toString() + " ");
+    }
+    if (playerScore > 21){
+        document.getElementById("pScore").textContent = "Your score: " + playerScore + " Busted!";
+        document.getElementById("hit").disabled = true;
+        document.getElementById("stand").disabled = true;
+    }else{
+        document.getElementById("pScore").textContent = "Your score: " + playerScore;
+    }
+   
+    
+}
+
+function addEScore(){
+    let card = drawCard();
+    enemyScore += card;
+    if (card == 10){
+        let ranks = ["J", "Q", "K"];
+
+        document.getElementById("oCards").textContent +=(ranks[Math.floor(Math.random()*3.0)] + " ");
+    }else if (card == 1){
+        document.getElementById("oCards").textContent +=("A ");
+    }else{
+        document.getElementById("oCards").textContent +=(card.toString() + " ");
+    }
+    if (enemyScore > 21){
+        document.getElementById("oScore").textContent = "Opponent's score: " + enemyScore + " Busted!";
+    }else{
+        document.getElementById("oScore").textContent = "Opponent's score: " + enemyScore;
+    }
+}
+
+
+function stand(){
+    document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    if (playerScore == 21){
+        window.alert("You win!");
+        userChips += betChips * 2;
+            document.getElementById("hit").disabled = true;
+            document.getElementById("stand").disabled = true;
+    return;
+    }
+
+    function enemyTurn(){
+        if (enemyScore < 16){
+            addEScore();
+            setTimeout(enemyTurn, 1000);
+        } else {
+            
+            if (enemyScore > 21 || playerScore > enemyScore){
+                window.alert("You win!");
+                userChips += betChips * 2;
+            } else if (playerScore > 21 || enemyScore > playerScore){
+                window.alert("You lose!");
+            } else {
+                window.alert("Tie game!");
+                userChips += betChips;
+            }
+        }
+    }
+
+    enemyTurn(); //recursion
+}
+
+function placeBet(){
+    let bet = parseInt(document.getElementById("betInput").value);
+
+    if (isNaN(bet) || bet < 0){
+        alert("Enter a valid bet.");
+        return;
+    }
+
+    if (bet > userChips){
+        alert("Not enough chips!");
+        return;
+    }
+
+    betChips = bet;
+    userChips -= bet;
+
+    document.getElementById("money").textContent = "Your chips: " + userChips;
+    document.getElementById("betDisplay").textContent = "Current bet: " + betChips;
+
+    // enable game once bet is placed
+    document.getElementById("hit").disabled = false;
+    document.getElementById("stand").disabled = false;
+    document.getElementById("betInput").hidden = true;
+    document.getElementById("betButton").hidden = true;
+}
+
+
+
+</script>
+
+<br>
+<h2 style="text-align: center;">
+<div id="oScore">Opponent's score: 0</div>
+<div id="oCards">Opponent's cards: </div>
+<hr>
+<button id="hit" type="button" class="btn btn-primary" onclick="addPScore()" disabled>Hit</button>
+<button id="stand" type="button" class="btn btn-danger" onclick = "stand()" disabled>Stand</button>
+<button id="reset" type="button" class="btn btn-secondary" onclick="resetGame()">Start</button>
+<br>
+
+
+<div id="betDisplay">Current bet: 0</div>
+<div id="pScore">Your score: 0</div>
+<div id="pCards">Your cards: </div>
+<br>
+<div id="money">Your chips: </div>
+<input id="betInput" type="number" min="1" placeholder="Enter bet" hidden>
+<button id="betButton" class="btn btn-info" onclick="placeBet()" hidden>Place Bet</button>
+</h2>
+
+
+
+</body>
+
+</html>

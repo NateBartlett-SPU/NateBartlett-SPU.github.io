@@ -17,24 +17,24 @@ td {
     background-color: blanchedalmond;
 }
 
-button.btn{
+button.btn.menu{
     background-color:tan;
     color: black;
     border:2px solid black;
     width: 200px;
     height:auto;
 
-}button.btn:hover{
+}button.btn.menu:hover{
     background-color:rgb(148, 119, 82);
     border:2px solid black;
 
-}button.btn:active{
+}button.btn.menu:active{
      background-color:rgb(97, 77, 51);
     border:2px solid black;
 } 
 
 
-a.btn{
+a.btn.menu{
     background-color:tan;
     color: black;
     border:2px solid black;
@@ -42,11 +42,11 @@ a.btn{
     height:auto;
     margin:5px;
 
-}a.btn:hover, a.btn:focus{
+}a.btn.menu:hover, a.btn:focus{
     background-color:rgb(148, 119, 82);
     border:2px solid black;
 
-}a.btn:active{
+}a.btn.menu:active{
      background-color:rgb(97, 77, 51);
     border:2px solid black;
 } 
